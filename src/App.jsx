@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Introduction from "./pages/Introduction";
 import Sickness from "./pages/Sickness";
@@ -73,18 +73,19 @@ const App = () => {
     <>
         <BrowserRouter>
         <Routes>
-            <Route path="/hmr-asia" element={<Layout />}>
+            <Route path="/" element={<Layout />}>
             <Route index element={<Home appointment={appointment} setAppointment={setAppointment}/>}/>
-            <Route path="/hmr-asia/gioi-thieu" element={<Introduction/>}/>
-            <Route path="/hmr-asia/benh-dieu-tri" element={<SicknessHome />}>
+            <Route path="gioi-thieu" element={<Introduction/>}/>
+            <Route path="benh-dieu-tri" element={<SicknessHome />}>
                 <Route index element={<Sickness/>}></Route>
-                <Route path="/hmr-asia/benh-dieu-tri/dau-vai-gay" element={<DauVaiGay />}/>
+                <Route path="dau-vai-gay" element={<DauVaiGay />}/>
             </Route>
-            <Route path="/hmr-asia/phuong-phap-dieu-tri" element={<CureMethods/>} />
-            <Route path="/hmr-asia/bac-si-khuyen-dung" element={<DoctorAdvice/>} />
-            <Route path="/hmr-asia/lien-he" element={<Contact/>} />
-            <Route path="/hmr-asia/*" element={<NoPage />} />
+            <Route path="phuong-phap-dieu-tri" element={<CureMethods/>} />
+            <Route path="bac-si-khuyen-dung" element={<DoctorAdvice/>} />
+            <Route path="lien-he" element={<Contact/>} />
+            <Route path="*" element={<NoPage />} />
             </Route>
+            <Route path="/hmr-asia/" element={<Navigate to="/" />} />
         </Routes>
         </BrowserRouter>
         <div className='floating-contact-container'>
