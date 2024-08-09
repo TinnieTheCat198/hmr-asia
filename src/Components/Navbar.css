@@ -1,0 +1,26 @@
+.menus {
+    list-style: none;
+    display: flex;
+    flex-shrink: 0;
+    gap: 1rem;
+}
+
+.menu-items {
+    position: relative;
+}
+
+.menu-items a {
+    color: #333333;
+    text-decoration: none;
+    text-wrap: nowrap;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.menu-items a:hover, button:hover {
+    color: #CE1489; /* Change color on hover */
+}
+
+/* .menu-items a:focus, button:focus {
+    color: #CE1489;
+} */

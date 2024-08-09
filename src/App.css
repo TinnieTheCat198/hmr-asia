@@ -1,0 +1,50 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #ffffff;
+  justify-content: stretch;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 0.5em #CE1489);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.floating-contact-container {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 20;
+}
+
+#appointment {
+  background-color: #CE1489;
+}
+
+#zalo {
+  background-color: #cbe0ff;
+}
+
+#phone {
+  background-color: #008080;
+}
