@@ -75,15 +75,15 @@ const App = () => {
         <Routes>
             <Route path="/hmr-asia" element={<Layout />}>
             <Route index element={<Home appointment={appointment} setAppointment={setAppointment}/>}/>
-            <Route path="gioi-thieu" element={<Introduction/>}/>
-            <Route path="benh-dieu-tri" element={<SicknessHome />}>
+            <Route path="/hmr-asia/gioi-thieu" element={<Introduction/>}/>
+            <Route path="/hmr-asia/benh-dieu-tri" element={<SicknessHome />}>
                 <Route index element={<Sickness/>}></Route>
-                <Route path="dau-vai-gay" element={<DauVaiGay />}/>
+                <Route path="/hmr-asia/benh-dieu-tri/dau-vai-gay" element={<DauVaiGay />}/>
             </Route>
-            <Route path="phuong-phap-dieu-tri" element={<CureMethods/>} />
-            <Route path="bac-si-khuyen-dung" element={<DoctorAdvice/>} />
-            <Route path="lien-he" element={<Contact/>} />
-            <Route path="*" element={<NoPage />} />
+            <Route path="/hmr-asia/phuong-phap-dieu-tri" element={<CureMethods/>} />
+            <Route path="/hmr-asia/bac-si-khuyen-dung" element={<DoctorAdvice/>} />
+            <Route path="/hmr-asia/lien-he" element={<Contact/>} />
+            <Route path="/hmr-asia/*" element={<NoPage />} />
             </Route>
         </Routes>
         </BrowserRouter>
